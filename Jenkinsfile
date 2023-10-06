@@ -15,9 +15,9 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
-	
-    stages{
-        
+Clears the target directory and builds the project described by your Maven POM file without running unit tests,
+and installs the resulting artifact (WAR) into your local Maven repository  	
+    stages{      
         stage('BUILD'){
             steps {
                 sh 'mvn clean install -DskipTests'
